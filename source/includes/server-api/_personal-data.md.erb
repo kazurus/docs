@@ -1,0 +1,36 @@
+## User's personal data
+
+Returns user's personal data fields.
+
+> Default response body
+
+```json
+{
+  "id": "be954fe3-f42a-4745-8bf0-2262faef02a4",
+  "firstName": "Franz",
+  "lastName": "Kafka",
+  "dateOfBirth": -2729635200
+}
+```
+
+### Personal data resource
+
+|Field                                       |Description        |
+|--------------------------------------------|-------------------|
+|`id` (*string*)                             | Resource ID       |
+|`firstName` (*string*)                      | First name        |
+|`lastName` (*string*)                       | Last name         |
+|`dateOfBirth`      (*number*)               | Timestamp, UTC tz |
+
+### HTTP Request
+
+`GET https://api.endpass.com/v1/user/info/personal`
+
+### Scopes
+
+- `user:data:read`
+
+### HTTP Status Codes
+
+- `200`
+- `204` (*in case there is no record saved before*)
