@@ -1,12 +1,20 @@
 ```js
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
+
 // With plugin combination
 const connect = new EndpassConnect({
-  oauthClientId: !YOUR_CLIENT_ID!
-  plugins: [EndpassOauthPlugin, EndpassProviderPlugin]
+  oauthClientId: YOUR_CLIENT_ID,
+  plugins: [EndpassOauthPlugin, EndpassProviderPlugin],
 });
+```
+
+```js
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
 
 // Only plugin
 const connect = new EndpassOauthPlugin({
-  oauthClientId: !YOUR_CLIENT_ID!
+  oauthClientId: YOUR_CLIENT_ID,
 });
 ```

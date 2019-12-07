@@ -11,17 +11,18 @@ const requestParams = {
   scopes,
 }
 
-// async/await
+// async / await
 (async () => {
   // Fetch required data
   const userInfo = await connect.request(requestParams);
-})()
 
-// Promise/then
-connect.request(requestParams)
-  .then(console.log);
+  console.log(userInfo);
+})();
+```
 
-// User info response
+> User info response
+
+```json
 {
   "id": "0d8c5fa3-c8a5-4c5f-8435-f35aef353f30",
   "email": "user@endpass.com",

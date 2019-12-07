@@ -610,6 +610,54 @@ html, body {
   color: #909090;
 }
 
+.highlight {
+  border-bottom: 1em solid #2E3336;
+}
+
 .highlight, .highlight .w {
   background-color: $code-bg;
+}
+
+.highlight.html,
+.highlight.shell,
+.highlight.javascript,
+.highlight.json {
+  position: relative;
+  padding-top: 3em;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .3em .75em;
+    background: #403e3e;
+  }
+}
+
+.highlight.html::before {
+  content: "html";
+}
+
+.highlight.shell::before {
+  content: "shell";
+}
+
+.highlight.javascript::before {
+  content: "javascript";
+}
+
+.highlight.json::before {
+  content: "json";
+}
+
+.highlight .copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  border-radius: 12px;
+  padding: 5px 10px;
+  outline: none;
+  background-color: lighten($code-bg, 10%);
 }
