@@ -655,9 +655,12 @@ html, body {
   position: absolute;
   top: 10px;
   right: 10px;
+  height: 18px;
+  width: 18px;
   border: 0;
-  border-radius: 12px;
-  padding: 5px 10px;
   outline: none;
-  background-color: lighten($code-bg, 10%);
+  text-indent: -99999px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23F3F7F9' fill-rule='evenodd' d='M14 5v9H5V5h9zm0-1H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zM2 9H1V2a1 1 0 0 1 1-1h7v1H2v7z'/%3E%3C/svg%3E%0A");
 }
