@@ -8,7 +8,7 @@ So, you want to use widget in your dApp. There are two ways to mount it:
 
 2. You can mount widget programically with `mountWidget` method and passing parameter.
 
-```js
+```javascript
 // The widget will be mounted when the user is logged in.
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
@@ -23,7 +23,7 @@ const connect = new EndpassProviderPlugin({
 });
 ```
 
-```js
+```javascript
 // The widget will only be mounted when the `mountWidget` method is called.
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
@@ -49,7 +49,7 @@ position properties: `top`, `left`, `bottom`, `right`.
 
 To prevent widget auto-mounting pass `false` to widget params option.
 
-```js
+```javascript
 // The Widget won't be mounted
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
@@ -67,7 +67,7 @@ Widget uses HTML Custom Events API and has static `id` and `data-endpass` attrib
 
 For example, you want to print something in console when widget will be opened:
 
-```js
+```javascript
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
 const connect = new EndpassProviderPlugin({
@@ -85,7 +85,7 @@ const connect = new EndpassProviderPlugin({
 
 Also, `mountWidget` returns frame element on complete:
 
-```js
+```javascript
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
 const connect = new EndpassProviderPlugin({
@@ -115,7 +115,7 @@ There are available widget events type which you can use in subscribtions:
 
 This example will demonstrate you how to update something on widget events firing.
 
-```js
+```javascript
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
 const web3 = new Web3('https://network.url');
