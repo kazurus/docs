@@ -1,8 +1,11 @@
 ```javascript
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
+
 const connect = new EndpassProviderPlugin({
-  oauthClientId: !YOUR_CLIENT_ID!,
+  oauthClientId: YOUR_CLIENT_ID,
 });
 
 connect.openAccount().then(res => {

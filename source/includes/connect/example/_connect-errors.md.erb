@@ -11,9 +11,9 @@ const requestParams = {
   method: 'GET',
   // Also you can pass scopes to the instance
   scopes,
-}
+};
 
-// async/await
+// async / await
 (async () => {
   try {
     // Fetch required data
@@ -21,23 +21,22 @@ const requestParams = {
   } catch(e) {
     // You can match the type of error from the imported instance
     if (e.code === ConnectError.ERRORS.AUTH) {
-      handleError()
+      handleError();
     }
 
     // Or Connect/Plugin instance
     if (e.code === connect.ERRORS.AUTH) {
-      handleError()
+      handleError();
     }
 
-    console.log(e)
+    console.log(e);
   }
-})()
+})();
+```
 
-// Promise/then
-connect.request(requestParams)
-  .catch(console.log);
+> Suppose an error has been thrown and can be seen in the console
 
-// Suppose an error has been thrown and can be seen in the console.
+```json
 {
   "message": "Some error message",
   "code": "CODE_FROM_ERRORS_SECTION",

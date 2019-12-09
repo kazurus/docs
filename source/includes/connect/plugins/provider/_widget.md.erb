@@ -12,8 +12,11 @@ So, you want to use widget in your dApp. There are two ways to mount it:
 // The widget will be mounted when the user is logged in.
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
+
 const connect = new EndpassProviderPlugin({
-  oauthClientId: !YOUR_CLIENT_ID!
+  oauthClientId: YOUR_CLIENT_ID,
   widget: {
     position: {
       top: '15px',
@@ -27,8 +30,11 @@ const connect = new EndpassProviderPlugin({
 // The widget will only be mounted when the `mountWidget` method is called.
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
+
 const connect = new EndpassProviderPlugin({
-  oauthClientId: !YOUR_CLIENT_ID!,
+  oauthClientId: YOUR_CLIENT_ID,
   widget: false,
 });
 
@@ -53,8 +59,11 @@ To prevent widget auto-mounting pass `false` to widget params option.
 // The Widget won't be mounted
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
+
 const connect = new EndpassProviderPlugin({
-  oauthClientId: !YOUR_CLIENT_ID!,
+  oauthClientId: YOUR_CLIENT_ID,
   widget: false,
 });
 ```
@@ -70,8 +79,11 @@ For example, you want to print something in console when widget will be opened:
 ```javascript
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
+
 const connect = new EndpassProviderPlugin({
-  oauthClientId: !YOUR_CLIENT_ID!,
+  oauthClientId: YOUR_CLIENT_ID,
 });
 
 (async () => {
@@ -88,8 +100,11 @@ Also, `mountWidget` returns frame element on complete:
 ```javascript
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
+
 const connect = new EndpassProviderPlugin({
-  oauthClientId: !YOUR_CLIENT_ID!,
+  oauthClientId: YOUR_CLIENT_ID,
   widget: false,
 });
 
@@ -118,9 +133,12 @@ This example will demonstrate you how to update something on widget events firin
 ```javascript
 import EndpassProviderPlugin from '@endpass/connect/provider';
 
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
+
 const web3 = new Web3('https://network.url');
 const connect = new EndpassProviderPlugin({
-  oauthClientId: !YOUR_CLIENT_ID!,
+  oauthClientId: YOUR_CLIENT_ID,
 });
 
 (async () => {

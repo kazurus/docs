@@ -1,7 +1,10 @@
 ```javascript
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
+
 // Initialize Connect with clientId from vault and plugin composition
 const connect = new EndpassConnect({
-  oauthClientId: !YOUR_CLIENT_ID!,
+  oauthClientId: YOUR_CLIENT_ID,
   plugins: [EndpassOauthPlugin],
   // Your can pass scopes to the instance or to each request separatly
   scopes: ['user:email:read'],
@@ -11,6 +14,6 @@ const connect = new EndpassConnect({
 
 // or separate plugin instance
 const connect = new EndpassOauthPlugin({
-  oauthClientId: !YOUR_CLIENT_ID!,
+  oauthClientId: YOUR_CLIENT_ID,
 });
 ```

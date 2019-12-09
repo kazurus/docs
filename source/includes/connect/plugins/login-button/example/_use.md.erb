@@ -7,24 +7,19 @@ const params = {
   // Filled/light skin (default filled)
   isLight: false,
   // Optional custom button text (pass default for example)
-  label: 'Sign in with Endpass'
-}
+  label: 'Sign in with Endpass',
+};
 
-// async/await
+// async / await
 (async () => {
   const button = await connect.createLoginButton(params);
   // And can mount/unmount this button
-  button.mount()
+  button.mount();
   // ...your code
-})()
+})();
+```
 
-// Promise/then
-connect.createLoginButton(params)
-  .then(() => { 
-    button.mount()
-    // ...your code 
-  });
-
+```json
 // If the user clicks on the button and successfully
 // continues the login process you will see in the console (callback onLogin)
 {

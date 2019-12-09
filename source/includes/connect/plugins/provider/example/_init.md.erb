@@ -1,12 +1,15 @@
 ```javascript
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
+
 // Initialize Connect with clientId from vault and plugin composition
 const connect = new EndpassConnect({
-  oauthClientId: !YOUR_CLIENT_ID!,
+  oauthClientId: YOUR_CLIENT_ID,
   plugins: [EndpassProviderPlugin]
 });
 
 // or separate plugin instance
 const connect = new EndpassProviderPlugin({
-  oauthClientId: !YOUR_CLIENT_ID!,
+  oauthClientId: YOUR_CLIENT_ID,
 });
 ```
