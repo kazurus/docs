@@ -1,21 +1,24 @@
 # Quick start
 
-A quick start example of using [Endpass Connect](#endpass-connect-client) library.
+A quick start example of using the [Endpass Connect](#endpass-connect-client) library in your web app.
 
-[Demo](https://endpass.github.io/connect-demo/#/examples)
+[Example App](https://endpass.github.io/connect-demo/#/examples)
 
-## Application registration
+## 1. Register Application
 
-To integrate Endpass auth into your application, you first need to register it with [Endpass-vault](https://vault.endpass.com/#/apps).
+Visit the [Endpass dashboard](https://vault.endpass.com/#/apps) and create a new application.
 
-### Requiried data:
+Save your Client ID for use later in this tutorial.
 
-|Key            |Description   |
-|---------------|--------------|
-|`Domain`       |The domain in which your application will be hosted|
-|`RedirectUrls` |List of available redirect URLs after successful authorization|
+[More about application registration](#application-registration)
 
-After registration, you will receive the application client ID for future use.
+## 2. Add Endpass Connect Library
+
+## 3. Request User Information
+
+Call the `connect.request` method to request information from the user.
+
+[List of scopes](#scopes)
 
 
 ## Library integration

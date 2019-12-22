@@ -1,0 +1,23 @@
+# Authentication
+
+## Application Registration
+
+To integrate Endpass auth into your application, you first need to register it in your [Endpass dashboard](https://vault.endpass.com/#/apps).
+
+### Required data:
+
+|Key            |Description   |
+|---------------|--------------|
+|`Domain`       |The domain in which your application will be hosted|
+|`RedirectUrls` |List of available redirect URLs after successful authorization|
+
+After registration, you will receive the application client ID and client secret for future use.
+
+<aside class="warning">
+Treat your client secret like a password. It should never be used in client-side apps or exposed to the user in any way.
+</aside>
+
+## Access Tokens
+After registering an application, you will receive a **client id** and **client secret**.
+
+The client ID and client secret can be used with your preferred oAuth2 client library to acquire an access token for a particular user of your application.
