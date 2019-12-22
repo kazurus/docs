@@ -1,0 +1,30 @@
+# Concepts
+
+## Scopes
+Scopes represent the information you are requesting from a user.
+Scopes must be explicitly defined when the Endpass Connect library is initialized.
+
+When the user clicks the "Login With Endpass" button, a permissions dialog with the requested scopes will be shown to the user.
+
+Try to request the minimal number of scopes required for your application. Users are more likely to agree to a smaller set of permissions.
+
+### List of Scopes
+
+|Scope   |Description|
+|---------|-----------|
+|**user:email:read**|Get the user's email address|
+|**user:address:read**|Get all of a user's physical addresses with verification status|
+|**user:phone:read**|Get all of the user's phone numbers with verification status|
+|**documents:status:read**|Get the verification status of all of the user's identity documents|
+|**documents:data:read**|Get all of the data, like name, number, and expiration date from all of the user's identity documents|
+|**documents:image:read**|Get the actual identity document images submitted by the user|
+|**wallet:address:read**|Get the user's primary cryptocurrency address|
+|**wallet:accounts:read**|Get all cryptocurrency addresses in the user's wallet|
+
+<aside class="notice">
+Most applications will only need the <strong>documents:status:read</strong> scope to get document verification status without requesting the actual documents.
+</aside>
+
+
+## Documents
+Documents represent the identity documents submitted by the user. After a document is submitted, it is automatically verified by Endpass AI technology. You do not need to verify that a document is valid if it has the "Verified" status.
