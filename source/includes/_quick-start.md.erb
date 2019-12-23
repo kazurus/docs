@@ -1,4 +1,4 @@
-# Quick start
+# Quick Start
 
 A quick start example of using the [Endpass Connect](#endpass-connect-client) library in your web app.
 
@@ -14,65 +14,25 @@ Save your Client ID for use later in this tutorial.
 
 ## 2. Add Endpass Connect Library
 
+<%= partial "includes/connect/example/_install.md.erb" %>
+<%= partial "includes/connect/example/_import-script.md.erb" %>
+
+Add the library to your application using the npm or script tag method.
+
+[More about installing the Endpass Connect library](#installation)
+
 ## 3. Request User Information
 
+<%= partial "includes/connect/example/_quick-start.md.erb" %>
+
+Initialize a new instance of the client with the scopes required for your
+application.
+
 Call the `connect.request` method to request information from the user.
+This method will open a window allowing the user to log in and grant
+permissions based on your application.
+
+For example, `connect.request('/user')` will return  a promise with [basic user information](#user).
 
 [List of scopes](#scopes)
 
-
-## Library integration
-
-There are two way to install Endpass connect in your application: use CDN integration or modular integrations for implementing the modular structure.
-
-### WAY 1: CDN integration
-
-If you want to integrate library via script tag just use provided CDN links
-
-||
-|-|
-|https://unpkg.com/@endpass/connect@latest|
-|https://cdn.jsdelivr.net/npm/@endpass/connect@latest|
-
-or specify the version
-
-||
-|-|
-|https://unpkg.com/@endpass/connect@0.22.1-beta|
-|https://cdn.jsdelivr.net/npm/@endpass/connect@0.22.1-beta|
-
-Add script tag to you application, before any calls to Endpass connect.
-
-<%= partial "includes/connect/example/_import-script.md.erb" %>
-
-After that, the Endpass connect library will be available in your js code as a root object variable. Use it as `window.EndpassConnect` or just `EndpassConnect`
-
-Plugin for oauth will be available as `window.EndpassOauthPlugin`.
-
-And plugin for provider usage - `window.EndpassProviderPlugin`.
-
-[More about plugins](#plugins)
-
-### WAY 2: Modular integration
-
-First you need to install the library through the package manager.
-
-<%= partial "includes/connect/example/_install.md.erb" %>
-
-After that, import it into the desired file
-
-<%= partial "includes/connect/example/_import-module.md.erb" %>
-
-## Creating instance
-
-To use Endpass connect, create an instance with the constructor presented in the previous [chapter](#library-integration). Remember to pass cliends ID you recieved in the first [chapter](#application-registration) of this guide.
-
-<%= partial "includes/connect/example/_init.md.erb" %>
-
-## Instance usage
-
-<%= partial "includes/connect/plugins/oauth/example/_use.md.erb" %>
-
-You have `connect` and you are ready to get user information. Just call correct method.
-
-For example, `connect.request('/user')` will return promise with [basic user information](#user).

@@ -1,0 +1,26 @@
+```javascript
+// If you are using modules or npm
+import EndpassConnect from '@endpass/connect';
+import EndpassOauthPlugin from '@endpass/connect/oauth';
+
+// Insert your client ID here
+const YOUR_CLIENT_ID = '';
+
+// Scopes determine permissions requested from the user
+const scopes = [
+  'user:email:read',
+  'user:phone:read',
+];
+
+// Initialize a new client instance
+const connect = new EndpassConnect({
+  oauthClientId: YOUR_CLIENT_ID,
+  // The Oauth plugin is required to access user data
+  plugins: [EndpassOauthPlugin],
+  scopes,
+});
+
+// Call the client's request method with any API endpoint
+connect.request('/user').then(console.log);
+
+```
