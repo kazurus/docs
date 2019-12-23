@@ -30,22 +30,16 @@ options and methods in the [Instance methods section](#instance-methods) and [Pl
 
 ## Plugins
 
-<%= partial "includes/connect/example/_plugin-error.md.erb" %>
+Endpass Connect supports mountable plugins. By default the library includes the [OAuth plugin](#oauth-plugin).
 
 |Name|Description|
 |-|-|
 |[OAuth](#oauth-plugin)|For getting private user information from [Server API](#server-api)|
-|[Provider](#provider-plugin)|For inject provider to [Web3](https://web3js.readthedocs.io/en/v1.2.1/) instance|
 
-Endpass Connect work with plugins also. By default library work only with [OAuth plugin](#oauth-plugin), without any account or [Provider plugin](#provider-plugin) methods.
-
-But if you need `provider` logic, just [import](#provider-plugin) provider file or add it as `<script>` tag
 
 <%= partial "includes/connect/plugins/oauth/_oauth.md.erb" %>
 
 <%= partial "includes/connect/plugins/login-button/_login-button.md.erb" %>
-
-<%= partial "includes/connect/plugins/provider/_provider.md.erb" %>
 
 <%= partial "includes/connect/_methods.md.erb" %>
 
