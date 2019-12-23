@@ -20,22 +20,11 @@ If you want to use Endpass Connect with CSP rules, just copy/paste this code int
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: *.endpass.com; script-src 'self' data: 'unsafe-inline' 'unsafe-eval' *.endpass.com unpkg.com; object-src 'self' *.endpass.com; style-src 'self' data: 'unsafe-inline' *.endpass.com; img-src 'self' *.endpass.com; media-src 'self' *.endpass.com; frame-src 'self' *.endpass.com; font-src 'self' *.endpass.com; connect-src 'self' *.endpass.com"/>
 ```
 
-
-### Init instance
-
-<%= partial "includes/connect/example/_init-instance.md.erb" %>
-
-Create instance of class and use it in your application. You can know about
-options and methods in the [Instance methods section](#instance-methods) and [Plugin section](#plugins). For handle errors see the [Error section](#connect-errors).
-
-## Plugins
-
-Endpass Connect supports mountable plugins. By default the library includes the [OAuth plugin](#oauth-plugin).
-
 |Name|Description|
 |-|-|
 |[OAuth](#oauth-plugin)|For getting private user information from [Server API](#server-api)|
 
+<%= partial "includes/connect/_usage.md.erb" %>
 
 <%= partial "includes/connect/plugins/oauth/_oauth.md.erb" %>
 
@@ -44,3 +33,5 @@ Endpass Connect supports mountable plugins. By default the library includes the 
 <%= partial "includes/connect/_methods.md.erb" %>
 
 <%= partial "includes/connect/_errors.md.erb" %>
+
+<%= partial "includes/connect/plugins/_plugins.md.erb" %>

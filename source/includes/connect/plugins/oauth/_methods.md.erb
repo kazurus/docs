@@ -1,6 +1,6 @@
-### Oauth
+### Methods
 
 | Method            | Params                                                                                                        | Returns               | Description                                                                                                                             |
 | ----------------- | ------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`         | `{ url: string, method: string, headers: object, params: object, data: string | object, scopes?: array<string> }` | Promise<HttpResponse> | Makes and http request with access token. You can pass [scopes](#scopes-list) to the instance constructor or to each request separately |
-| `logoutFromOauth` |                                                                                                               | Promise               | Logout oauth flow                                                                                                                       |
+| `request`         | `{ url: string, method: string, headers: object, params: object, data: string  object, scopes?: array<string> }` | Promise<HttpResponse> | Makes and http request with access token. You can pass [scopes](#scopes-list) to the instance constructor or to each request separately |
+| `logoutFromOauth` |                                                                                                               | Promise               | Logout the currently authenticated oAuth user                                                                                                                       |
