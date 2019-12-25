@@ -9,7 +9,7 @@ Document resource represents a user’s document.
   {
     "id": "f1f80c7a-57c7-4259-8e80-d1bb09932e82",
     "createdAt": 1543336121,
-    "status": "New",
+    "status": "Draft",
     "documentType": "Passport",
     "description": "Custom document description",
     "imageId": "f10c347a-59x2-4259-8e80-d1bb09932z30",
@@ -46,7 +46,7 @@ Document resource represents a user’s document.
 ```json
 {
   ...
-  "status": "New"
+  "status": "Draft"
 }
 ```
 
@@ -113,9 +113,9 @@ Document resource represents a user’s document.
 
 |Key                |Description                                             |
 |-------------------|--------------------------------------------------------|
-|`New`              |Default status, not submitted to verification service   |
-|`Pending`          |Document queued to verification service                 |
-|`PendingAdditional`|Document queued to additional verification              |
+|`Draft`            |Default status, not submitted to verification service   |
+|`Recognition`      |Submitted to verification service, waiting result       |
+|`PendingReview`    |Document queued to manual verification                  |
 |`NotReadable`      |Document not readable, need update document file (image)|
 |`NotVerified`      |Received failed result from the verification service    |
 |`Verified`         |Document verified                                       |
