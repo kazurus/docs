@@ -5,7 +5,7 @@ import EndpassProviderPlugin from '@endpass/connect/provider';
 const YOUR_CLIENT_ID = '';
 
 const connect = new EndpassProviderPlugin({
-  oauthClientId: YOUR_CLIENT_ID,
+  clientId: YOUR_CLIENT_ID,
 });
 
 connect.openAccount().then(res => {

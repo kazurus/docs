@@ -2,14 +2,16 @@
 
 If you are not using a build system like Webpack in your project, you can load Endpass Connect from CDN with a script tag.
 
-<%= partial "includes/connect/example/_import-script.md.erb" %>
+
+<%= partial "includes/connect/example/_import-browser-oauth.md.erb" %>
+<%= partial "includes/connect/example/_import-browser-compose.md.erb" %>
 
 ### Loading a specific version
 
 Loading the latest library version is recommended for most use cases.
 For advanced users, it is possible to specify a specific version to load in the script source.
 
-`https://unpkg.com/@endpass/connect@0.22.1-beta`
+`https://unpkg.com/@endpass/connect@0.31.0-beta`
 
 The list of versions can be [seen on npm](https://www.npmjs.com/package/@endpass/connect?activeTab=versions).
 
@@ -22,4 +24,4 @@ Latest version:
 
 Specify a version:
 
-`https://cdn.jsdelivr.net/npm/@endpass/connect@0.22.1-beta`
+`https://cdn.jsdelivr.net/npm/@endpass/connect@0.31.0-beta`

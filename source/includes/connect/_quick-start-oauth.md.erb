@@ -1,6 +1,5 @@
 ```javascript
 // If you are using modules or npm
-import EndpassConnect from '@endpass/connect';
 import EndpassOauthPlugin from '@endpass/connect/oauth';
 
 // Insert your client ID here
@@ -13,10 +12,8 @@ const scopes = [
 ];
 
 // Initialize a new client instance
-const connect = new EndpassConnect({
-  oauthClientId: YOUR_CLIENT_ID,
-  // The Oauth plugin is required to access user data
-  plugins: [EndpassOauthPlugin],
+const connect = new EndpassOauthPlugin({
+  clientId: YOUR_CLIENT_ID,
   scopes,
 });
 

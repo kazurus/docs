@@ -16,7 +16,7 @@ import EndpassProviderPlugin from '@endpass/connect/provider';
 const YOUR_CLIENT_ID = '';
 
 const connect = new EndpassProviderPlugin({
-  oauthClientId: YOUR_CLIENT_ID,
+  clientId: YOUR_CLIENT_ID,
   widget: {
     position: {
       top: '15px',
@@ -34,7 +34,7 @@ import EndpassProviderPlugin from '@endpass/connect/provider';
 const YOUR_CLIENT_ID = '';
 
 const connect = new EndpassProviderPlugin({
-  oauthClientId: YOUR_CLIENT_ID,
+  clientId: YOUR_CLIENT_ID,
   widget: false,
 });
 
@@ -63,7 +63,7 @@ import EndpassProviderPlugin from '@endpass/connect/provider';
 const YOUR_CLIENT_ID = '';
 
 const connect = new EndpassProviderPlugin({
-  oauthClientId: YOUR_CLIENT_ID,
+  clientId: YOUR_CLIENT_ID,
   widget: false,
 });
 ```
@@ -83,12 +83,12 @@ import EndpassProviderPlugin from '@endpass/connect/provider';
 const YOUR_CLIENT_ID = '';
 
 const connect = new EndpassProviderPlugin({
-  oauthClientId: YOUR_CLIENT_ID,
+  clientId: YOUR_CLIENT_ID,
 });
 
 (async () => {
   const widget = await connect.getWidgetNode();
-  
+
   widget.addEventListener('open', () => {
     console.log('Widget opened!');
   });
@@ -104,7 +104,7 @@ import EndpassProviderPlugin from '@endpass/connect/provider';
 const YOUR_CLIENT_ID = '';
 
 const connect = new EndpassProviderPlugin({
-  oauthClientId: YOUR_CLIENT_ID,
+  clientId: YOUR_CLIENT_ID,
   widget: false,
 });
 
@@ -138,12 +138,12 @@ const YOUR_CLIENT_ID = '';
 
 const web3 = new Web3('https://network.url');
 const connect = new EndpassProviderPlugin({
-  oauthClientId: YOUR_CLIENT_ID,
+  clientId: YOUR_CLIENT_ID,
 });
 
 (async () => {
   const provider = await connect.getProvider();
-  
+
   window.ethereum = provider;
   web3.setProvider(provider);
 

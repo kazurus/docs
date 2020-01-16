@@ -15,7 +15,8 @@ Save your Client ID for use later in this tutorial.
 ## 2. Add Endpass Connect Library
 
 <%= partial "includes/connect/example/_install.md.erb" %>
-<%= partial "includes/connect/example/_import-script.md.erb" %>
+<%= partial "includes/connect/example/_import-browser-oauth.md.erb" %>
+<%= partial "includes/connect/example/_import-browser-compose.md.erb" %>
 
 Add the library to your application using the npm or script tag method.
 
@@ -23,7 +24,8 @@ Add the library to your application using the npm or script tag method.
 
 ## 3. Request User Information
 
-<%= partial "includes/connect/example/_quick-start.md.erb" %>
+<%= partial "includes/connect/_quick-start-oauth.md.erb" %>
+<%= partial "includes/connect/_quick-start-compose.md.erb" %>
 
 Initialize a new instance of the client with the scopes required for your
 application.

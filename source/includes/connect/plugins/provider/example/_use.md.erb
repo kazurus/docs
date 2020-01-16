@@ -6,20 +6,20 @@ const YOUR_CLIENT_ID = '';
 
 const web3 = new Web3('https://network.url');
 const connect = new EndpassProviderPlugin({
-  oauthClientId: YOUR_CLIENT_ID,
+  clientId: YOUR_CLIENT_ID,
 });
 
 (async () => {
   const provider = await connect.getProvider();
-  
+
   // If you are using old versions of web3 (0.30.0-beta and below) you should call
   // setProvider
   web3.setProvider(provider);
-  
+
   // If you are using new versions of web3 (1.0.0 and more) you can reassign
   // global property ethereum in application window object
   window.ethereum = provider;
-  
+
   // We highly recommend to use both methods for more stability and compatibility
   window.ethereum = provider;
   web3.setProvider(provider);
