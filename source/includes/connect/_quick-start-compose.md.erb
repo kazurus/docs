@@ -1,9 +1,9 @@
 ```javascript
-// For example, when you need multiple plugins usage, just combine them by EndpassComposePlugin
+// For example, when you need multiple plugins usage, just combine them by EndpassCompose
 
 // If you are using modules or npm
-import EndpassComposePlugin from '@endpass/connect/compose';
-import EndpassOauthPlugin from '@endpass/connect/oauth';
+import EndpassCompose from '@endpass/connect/compose';
+import EndpassOauth from '@endpass/connect/oauth';
 
 // Insert your client ID here
 const YOUR_CLIENT_ID = '';
@@ -15,11 +15,11 @@ const scopes = [
 ];
 
 // Initialize a new client instance
-const connect = new EndpassComposePlugin({
+const connect = new EndpassCompose({
   clientId: YOUR_CLIENT_ID,
   scopes,
   plugins: [
-    EndpassOauthPlugin
+    EndpassOauth
   ]
 });
 

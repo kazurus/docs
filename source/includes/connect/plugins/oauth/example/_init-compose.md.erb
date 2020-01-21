@@ -1,21 +1,21 @@
-> When you need multiple plugins usage, just combine them by EndpassComposePlugin
+> When you need multiple plugins usage, just combine them by EndpassCompose
 
 ```javascript
 // If you are using modules or npm
-import EndpassComposePlugin from '@endpass/connect/compose';
-import EndpassOauthPlugin from '@endpass/connect/oauth';
+import EndpassCompose from '@endpass/connect/compose';
+import EndpassOauth from '@endpass/connect/oauth';
 
 // Insert your client ID here
 const YOUR_CLIENT_ID = '';
 
 // Initialize Connect with clientId from vault
-const connect = new EndpassComposePlugin({
+const connect = new EndpassCompose({
   clientId: YOUR_CLIENT_ID,
   // Your can pass scopes to the instance or to each request separatly
   scopes: ['user:email:read'],
   // Choose popup separate window or modal iframe (default modal)
   isPopup: false,
   plugins: [
-    EndpassOauthPlugin
+    EndpassOauth
   ]
 });

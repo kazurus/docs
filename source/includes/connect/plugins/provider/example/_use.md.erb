@@ -1,11 +1,11 @@
 ```javascript
-import EndpassProviderPlugin from '@endpass/connect/provider';
+import EndpassProvider from '@endpass/connect/provider';
 
 // Insert your client ID here
 const YOUR_CLIENT_ID = '';
 
 const web3 = new Web3('https://network.url');
-const connect = new EndpassProviderPlugin({
+const connect = new EndpassProvider({
   clientId: YOUR_CLIENT_ID,
 });
 
