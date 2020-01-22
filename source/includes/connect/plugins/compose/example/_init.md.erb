@@ -3,19 +3,23 @@
 ```javascript
 // If you are using modules or npm
 import EndpassCompose from '@endpass/connect/compose';
+import EndpassLoginButton from '@endpass/connect/loginButton';
 import EndpassOauth from '@endpass/connect/oauth';
 
 // Insert your client ID here
 const YOUR_CLIENT_ID = '';
 
 // Initialize Connect with clientId from vault
+// with passing options to each plugin
 const connect = new EndpassCompose({
   clientId: YOUR_CLIENT_ID,
-  // Your can pass scopes to the instance or to each request separatly
   scopes: ['user:email:read'],
-  // Choose popup separate window or modal iframe (default modal)
   isPopup: false,
   plugins: [
+    EndpassLoginButton,
     EndpassOauth
   ]
 });
+
+// After creation `connect` instance have the same methods as it in plugins
+// like `connect.request()`

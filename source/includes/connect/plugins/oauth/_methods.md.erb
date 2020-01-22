@@ -1,6 +1,6 @@
-### Methods
+### Oauth plugin methods
 
 | Method            | Params                                                                                                        | Returns               | Description                                                                                                                             |
 | ----------------- | ------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`         | `{ url: string, method: string, headers: object, params: object, data: string  object, scopes?: array<string> }` | Promise<HttpResponse> | Makes and http request with access token. You can pass [scopes](#scopes-list) to the instance constructor or to each request separately |
+| `request`         | `{`<br>` url: string,`<br>` method: string,`<br>` headers: object,`<br>` params: object,`<br>` data: string  object,`<br>` scopes?: array<string>`<br>` }` | Promise<HttpResponse> | Makes and http request with access token. You can pass [scopes](#scopes-list) to the instance constructor or to each request separately |
 | `logoutFromOauth` |                                                                                                               | Promise               | Logout the currently authenticated oAuth user                                                                                                                       |
