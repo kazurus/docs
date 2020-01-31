@@ -3,4 +3,23 @@
 ```html
 <!-- Import OAuth plugin as html script tag -->
 <script src="https://unpkg.com/@endpass/connect@latest/oauth.min.js" type="text/javascript"></script>
+<script>
+(() => {
+    // all Endpass plugins available from window
+    const EndpassOauth = window.EndpassOauth;
+
+    // Insert your client ID here
+    const YOUR_CLIENT_ID = '';
+
+    // Initialize Connect with clientId from vault
+    const connect = new EndpassOauth({
+      clientId: YOUR_CLIENT_ID,
+      // Your can pass scopes to the instance or to each request separatly
+      scopes: ['user:email:read'],
+      // Choose popup separate window or modal iframe (default modal)
+      isPopup: false,
+    });
+
+})();
+</script>
 ```
