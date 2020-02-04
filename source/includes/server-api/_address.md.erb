@@ -1,21 +1,34 @@
 ## User's address
 
-### Scopes
+Returns user's address
 
-`user:address:read`
+> Default response body
 
-### HTTP Request
+```json
+[
+  {
+    "main": false,
+    "created_at": 1577454009,
+    "apartmentNumber": "37",
+    "streetNumber": "8327",
+    "street": "W North Ave",
+    "city": "Chicago",
+    "stateRegion": "Melrose Park",
+    "country": "USA",
+    "postalCode": "postal code",
+    "lat": 39.38,
+    "lng": -76.69,
+    "verified": true
+  }
+]
+```
 
-`GET https://api.endpass.com/v1/user/address`
-
-Return list of user's addresses.
 
 ### User data resource
 
 |Field                                       |Description        |
 |--------------------------------------------|-------------------|
 |`main`            (*boolean*)               | Main address flag |
-|`status`          (*string*)                | Address status    |
 |`created_at`      (*number*)                | Timestamp, UTC tz |
 |`apartmentNumber` (*string*)                | Apartment number  |
 |`streetNumber`    (*string*)                | Street Number     |
@@ -27,3 +40,13 @@ Return list of user's addresses.
 |`lat`             (*number*)                | Latitude          |
 |`lng`             (*number*)                | Longitude         |
 |`verified`        (*boolean*)               | Is verified       |
+
+### HTTP Request
+
+`GET https://api.endpass.com/v1/user/address`
+
+Return list of user's addresses.
+
+### Scopes
+
+`user:address:read`
