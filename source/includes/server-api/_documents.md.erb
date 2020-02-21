@@ -41,7 +41,7 @@ Document resource represents a user’s document.
 }
 ```
 
-> Document's status (documents:status:read)
+> Document's status (documents:passport:status:read, documents:proof_address:status:read, documents:driver_license:status:read, documents:id_card:status:read)
 
 ```json
 {
@@ -50,7 +50,7 @@ Document resource represents a user’s document.
 }
 ```
 
-> Document's data (documents:data:read)
+> Document's data (documents:passport:data:read, documents:proof_address:data:read, documents:driver_license:data:read, documents:id_card:data:read)
 
 ```json
 {
@@ -132,8 +132,10 @@ Returns all user documents.
 
 ### Scopes
 
-- `documents:status:read`
-- `documents:data:read`
+- `documents:passport:status:read`
+- `documents:proof_address:status:read`
+- `documents:driver_license:status:read`
+- `documents:id_card:status:read`
 
 ```shell
 curl "https://api.endpass.com/v1/documents"
@@ -150,8 +152,10 @@ Returns document by ID.
 
 ### Scopes
 
-- `documents:status:read`
-- `documents:data:read`
+- `documents:passport:data:read`
+- `documents:proof_address:data:read`
+- `documents:driver_license:data:read`
+- `documents:id_card:data:read`
 
 ```shell
 curl "https://api.endpass.com/v1/documents/{ID}"
@@ -170,7 +174,10 @@ If there is no uploaded file returns *204*.
 
 ### Scopes
 
-- `documents:image:read`
+- `documents:passport:image:read`
+- `documents:proof_address:image:read`
+- `documents:driver_license:image:read`
+- `documents:id_card:image:read`
 
 ```shell
 curl "https://api.endpass.com/v1/documents/{ID}/front/file"
@@ -189,7 +196,10 @@ If there is no uploaded file returns *204*.
 
 ### Scopes
 
-- `documents:image:read`
+- `documents:passport:image:read`
+- `documents:proof_address:image:read`
+- `documents:driver_license:image:read`
+- `documents:id_card:image:read`
 
 ```shell
 curl "https://api.endpass.com/v1/documents/{ID}/back/file"
